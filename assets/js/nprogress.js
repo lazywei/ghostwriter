@@ -147,8 +147,10 @@
    */
 
   NProgress.done = function(force) {
-    Prism.highlightAll();
-    
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+
     if (!force && !NProgress.status) return this;
 
     return NProgress.inc(0.3 + 0.5 * Math.random()).set(1);

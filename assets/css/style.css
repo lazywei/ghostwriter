@@ -247,7 +247,7 @@ table {
     content: "";
     display: block;
     margin: 40px auto 0;
-    width: 100px; }
+    width: 100%; }
 
 .post-content a:hover {
   border-bottom: 1px dotted #f03838;
