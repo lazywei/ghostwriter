@@ -30,19 +30,18 @@
         <header class="site-header">
             <div class="container">
                 <div class="site-title-wrapper">
-                    {{#if @blog.logo}}
-                        <a class="site-logo js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+                    {{#if @blog.cover}}
+                        <a class="site-logo js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}"><img src="{{@blog.cover}}" alt="{{@blog.title}}" /></a>
                     {{else}}
                         <h1 class="site-title"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a></h1>
-
-                        <a class="button-square" href="{{@blog.url}}/rss"><i class="fa fa-rss"></i></a>
                     {{/if}}
+                    <a href="{{@blog.url}}/rss">RSS <i class="fa fa-rss"></i></a>
                 </div>
 
                 <ul class="site-nav">
                     <li class="site-nav-item"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">Latest Post</a></li>
                     <li class="site-nav-item"><a class="js-ajax-link js-show-index" title="{{@blog.title}}" href="{{@blog.url}}">Browse Posts</a></li>
-                    <li class="site-nav-item"><a class="js-ajax-link" title="About | {{@blog.title}}" href="{{@blog.url}}/about">About</a></li>
+                    <li class="site-nav-item"><a class="js-ajax-link" title="About | {{@blog.title}}" href="{{@blog.url}}/about-me">About</a></li>
 
                     {{#if @blog.logo}}
                         <li class="site-nav-item"><a href="{{@blog.url}}/rss">RSS</a></li>
@@ -50,7 +49,7 @@
                 </ul>
             </div>
         </header>
-    
+
         <div id="ajax-container">
             {{{body}}}
         </div>

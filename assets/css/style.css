@@ -194,7 +194,8 @@ table {
 .site-logo {
   display: block; }
   .site-logo img {
-    margin: 0; }
+    margin: 0;
+    width: 100%; }
 
 .site-nav {
   list-style: none;
